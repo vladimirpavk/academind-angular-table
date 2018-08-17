@@ -12,17 +12,32 @@ export class AppnavComponent implements OnInit{
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
-      map(result => result.matches)
-    );
+      map(
+        (result:BreakpointState) => {
+          console.log(result.matches);
+          return result.matches;
+        }));
     
   constructor(private breakpointObserver: BreakpointObserver) {}
   
   ngOnInit(){
-    this.breakpointObserver.observe(Breakpoints.Web).subscribe(
-      (result:BreakpointState)=>{
+  }
+
+  public headerClick(){
+    console.log("Header clicked...");
+    //console.log(navigator.usb.getDevices(
+    //  (result)=>{
+    //    console.log(result);
+    //  }
+    //));
+    navigator.usb.requestDevice({
+      filters:[]
+    })
+      .then((result)=>{
         console.log(result);
-      }
-    )
+      })
+
+      
   }
 
 }
