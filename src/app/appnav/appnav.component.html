@@ -4,12 +4,11 @@
 </div>
 
 <div style="width:100%;">
-  <!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-container class="sidenav-container">
 
     <mat-sidenav
       #drawer
-      class="sidenav"
-      fixedInViewport="true"
+      class="sidenav"      
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
@@ -36,14 +35,15 @@
 
       <app-dash></app-dash>
     </mat-sidenav-content>
-  </mat-sidenav-container>-->
+  </mat-sidenav-container>
 
+  <!--
   <mat-drawer-container class="drawer-container">
 
     <mat-drawer
       #drawer
       class="drawer"
-      fixedInViewport="true"
+      style="width: 20%;"      
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
@@ -89,7 +89,7 @@
 
       <app-dash></app-dash>
     </mat-drawer-content>
-  </mat-drawer-container>
+  </mat-drawer-container>-->
 
 </div>
 

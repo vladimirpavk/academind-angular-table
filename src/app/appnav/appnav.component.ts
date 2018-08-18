@@ -30,13 +30,7 @@ export class AppnavComponent implements OnInit{
     //    console.log(result);
     //  }
     //));
-    navigator.usb.requestDevice({
-      filters:[]
-    })
-      .then((result)=>{
-        console.log(result);
-      })
-
+   
       
   }
 
