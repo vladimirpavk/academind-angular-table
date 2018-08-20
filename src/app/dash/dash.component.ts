@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
+import { MatCard } from '@angular/material';
 
 @Component({
   selector: 'app-dash',
@@ -77,5 +78,12 @@ export class DashComponent {
     })
   );
 
+  @ViewChild("matcard") matcard:MatCard;
+  private anotherCard:MatCard = new MatCard();
+
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOninit(){
+      
+  }
 }
